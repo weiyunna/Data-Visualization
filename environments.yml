@@ -1,0 +1,33 @@
+# Conda environment specification. The dependencies defined in this file will
+# be automatically provisioned for runs with userManagedDependencies=False.
+
+# Details about the Conda environment file format:
+# https://conda.io/docs/user-guide/tasks/manage-environments.html#create-env-file-manually
+
+
+ #By including pip in the dependencies, that Python-specific package manager will be included. 
+ #Listing packages below pip in the hierarchy, indicates that pip should be used to install those packages
+
+#the environment name will be pythonVisualization by default. However, the --name | -n flag can be used to override
+name : pythonVisualization
+dependencies:
+  - python==3.7
+  - pip
+  - seaborn
+  - matplotlib
+  - bokeh
+  - plotly==4.7.1
+  - notebook>=5.3
+  - ipywidgets==7.5
+  - pip:
+    - plotly==4.7.1
+    - notebook>=5.3
+    - ipywidgets==7.5
+   
+
+
+#channels refers to where Conda, the environment management tool, is going to look to find the declared dependencies.
+channels:
+  - defaults
+  - anaconda
+  - conda-forge

@@ -1,0 +1,5 @@
+# First step
+conda update -n base -c defaults conda
+
+# Second step
+conda env create -f environments.yml -n pythonVisualization anaconda
